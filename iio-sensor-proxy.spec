@@ -8,6 +8,9 @@ URL:		https://github.com/hadess/iio-sensor-proxy
 Source0:	https://codeload.github.com/hadess/iio-sensor-proxy/%{name}-%{version}.tar.gz
 BuildRequires:	gnome-common
 BuildRequires:	gtk-doc
+BuildRequires:	pkgconfig(gio-2.0)
+BuildRequires:	pkgconfig(gudev-1.0)
+BuildRequires:	pkgconfig(libsystemd)
 
 %description
 IIO sensors to D-Bus proxy.
