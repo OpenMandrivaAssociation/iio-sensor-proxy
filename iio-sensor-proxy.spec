@@ -1,7 +1,7 @@
 Summary:	IIO sensors to D-Bus proxy
 Name:		iio-sensor-proxy
 Version:	1.0
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		System/Libraries
 URL:		https://github.com/hadess/iio-sensor-proxy
