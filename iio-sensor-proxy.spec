@@ -24,7 +24,8 @@ IIO sensors to D-Bus proxy.
 %prep
 %autosetup -p1
 NOCONFIGURE=1 ./autogen.sh
-%configure
+%configure \
+	--disable-gtk-tests
 
 %build
 %make_build
