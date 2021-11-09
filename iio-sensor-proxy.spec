@@ -1,6 +1,6 @@
 Summary:	IIO sensors to D-Bus proxy
 Name:		iio-sensor-proxy
-Version:	3.0
+Version:	3.3
 Release:	1
 License:	GPLv2+
 Group:		System/Libraries
@@ -13,29 +13,26 @@ BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gudev-1.0)
 BuildRequires:	pkgconfig(libsystemd)
-BuildRequires:	automake
-BuildRequires:	autoconf
-BuildRequires:	libtool
-BuildRequires:	autoconf-archive
+BuildRequires:	meson
 
 %description
 IIO sensors to D-Bus proxy.
 
 %prep
 %autosetup -p1
-NOCONFIGURE=1 ./autogen.sh
-%configure \
-	--disable-gtk-tests
+%meson \
+	-Dgtk-tests=false \
+	-Dgeoclue-user=geoclue
 
 %build
-%make_build
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %files
 %{_sysconfdir}/dbus-1/system.d/net.hadess.SensorProxy.conf
 %{_bindir}/monitor-sensor
-%{_sbindir}/iio-sensor-proxy
+%{_libexecdir}/iio-sensor-proxy
 /lib/systemd/system/iio-sensor-proxy.service
 /lib/udev/rules.d/80-iio-sensor-proxy.rules
