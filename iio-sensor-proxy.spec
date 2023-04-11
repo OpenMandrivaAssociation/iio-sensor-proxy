@@ -1,7 +1,7 @@
 Summary:	IIO sensors to D-Bus proxy
 Name:		iio-sensor-proxy
-Version:	3.3
-Release:	3
+Version:	3.4
+Release:	1
 License:	GPLv2+
 Group:		System/Libraries
 URL:		https://gitlab.freedesktop.org/hadess/iio-sensor-proxy/
@@ -36,3 +36,4 @@ IIO sensors to D-Bus proxy.
 %{_libexecdir}/iio-sensor-proxy
 %{_unitdir}/iio-sensor-proxy.service
 %{_udevrulesdir}/80-iio-sensor-proxy.rules
+%{_datadir}/polkit-1/actions/net.hadess.SensorProxy.policy
