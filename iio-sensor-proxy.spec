@@ -13,6 +13,7 @@ BuildRequires:	pkgconfig(gio-2.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gudev-1.0)
 BuildRequires:	pkgconfig(libsystemd)
+BuildRequires:	pkgconfig(polkit-gobject-1)
 BuildRequires:	meson
 
 %description
